@@ -15,7 +15,7 @@ public class Algoritmo {
 	}
 	//FUNCIONA! ta probao (BORRAR xD)
 	//ordena los h subvectores
-	public static int[] ordInserTroz(int[] vector, int h){
+	private static int[] ordInserTroz(int[] vector, int h){
 		int aux; // variable auxiliar para cambiar valores en los vectores
 		for(int t=0; t<h;t++){	
 			
@@ -38,7 +38,7 @@ public class Algoritmo {
 	
 	//VA FERPE (borrar)
 	//ordena el vector total
-	public static int[] ordInserTotal(int[] vector){
+	private static int[] ordInserTotal(int[] vector){
 		int aux; // variable auxiliar para cambiar valores en los vectores
 		
 		for(int i=1;i<vector.length;i++){
