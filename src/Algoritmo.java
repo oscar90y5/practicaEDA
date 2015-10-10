@@ -19,17 +19,16 @@ public class Algoritmo {
 		int aux; // variable auxiliar para cambiar valores en los vectores
 		for(int t=0; t<h;t++){	
 			
-			for(int i=t;i<vector.length;i=i+h){
+			for(int i=t+h;i<vector.length;i=i+h){
 				
-				for(int j=t;j<vector.length;j=j+h){
+				for(int j=i;j>=h;j=j-h){
 					
-					if(j+h<vector.length){
-						if(vector[j]>vector[j+h]){
-							
-							aux=vector[j];
-							vector[j]=vector[j+h];
-							vector[j+h]=aux;
-						}
+					if(vector[j]<vector[j-h]){
+						aux=vector[j];
+						vector[j]=vector[j-h];
+						vector[j-h]=aux;
+					} else {
+						break;
 					}
 				}
 			}
@@ -42,14 +41,14 @@ public class Algoritmo {
 	public static int[] ordInserTotal(int[] vector){
 		int aux; // variable auxiliar para cambiar valores en los vectores
 		
-		for(int i=0;i<vector.length;i++){
-			for(int j=0;j<vector.length;j++){
-				if(j+1<vector.length){
-					if(vector[j]>vector[j+1]){
-						aux=vector[j];
-						vector[j]=vector[j+1];
-						vector[j+1]=aux;
-					}
+		for(int i=1;i<vector.length;i++){
+			for(int j=i;j>=1;j--){
+				if(vector[j]<vector[j-1]){
+					aux=vector[j];
+					vector[j]=vector[j-1];
+					vector[j-1]=aux;
+				} else {
+					break;
 				}
 			}
 		}
