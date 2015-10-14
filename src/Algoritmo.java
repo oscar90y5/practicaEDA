@@ -10,6 +10,7 @@ public class Algoritmo {
 		//System.out.println(vector.length);
 		int h = (int) (Math.pow(vector.length,0.734)* 1.425 +0.5);
 		comparaciones =0;
+		
 		//devolvemos el vector ordenado
 		ordInserTotal(ordInserTroz(vector,h));
 		
