@@ -1,7 +1,13 @@
+import java.io.IOException;
+
+
+
+
+
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		int[][] resultados = new int[20][4];
 		int size=1500;
 		
@@ -15,6 +21,8 @@ public class Main {
 			size+=1500;
 		}
 		pintaTabla(resultados);
+		
+		ExportaTabla.exportaTabla(resultados);
 		
 	}
 	
@@ -70,7 +78,7 @@ public class Main {
 	}
 	
 	public static void pintaTabla(int[][] tabla){
-		System.out.println("Nº ele| media | maximo | minimo");
+		System.out.println("Nº ele| Media | Máximo | Minimo");
 		for (int i=0; i<20;i++){
 			for(int j =0; j<4;j++){
 				System.out.print(tabla[i][j]+"  ");
