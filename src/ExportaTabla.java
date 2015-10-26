@@ -1,3 +1,10 @@
+/**
+ * 
+ * @author Iván Castaño Fernández
+ * @author Óscar Fernández Angulo
+ *
+ */
+
 import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,8 +16,6 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-
-
 
 
 public class ExportaTabla {
@@ -37,11 +42,10 @@ public class ExportaTabla {
 		celda.setCellValue("Máximo");
 		celda = fila.createCell(4);
 		celda.setCellValue("Mínimo");
-		//Sheet hoja = libro.getSheet(1);
-		 for(int i=0;i<20;i++){
+		 
+		for(int i=0;i<20;i++){
 			 fila = hoja.createRow(i+2);
 			 for(int j=0;j<4;j++){
-			//	 Cell celda = hoja.getCell(i,j);
 				 celda = fila.createCell(j+1);
 				 celda.setCellValue(tabla[i][j]);
 			 }
